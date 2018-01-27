@@ -1,5 +1,4 @@
 import io
-import sys
 
 
 def reader(filename):
