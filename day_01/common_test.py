@@ -5,7 +5,7 @@ import unittest
 import common
 
 
-class TestCaptcha(unittest.TestCase):
+class TestCommon(unittest.TestCase):
     def setUp(self):
         self.tests = [('example1.txt', '1122'),
                       ('example2.txt', '1111'),
