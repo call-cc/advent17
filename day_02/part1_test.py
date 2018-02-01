@@ -7,12 +7,11 @@ import common
 
 
 class TestChecksum(unittest.TestCase):
-    def setUp(self):
+    def test_checksum(self):
         self.tests = [('example1.txt', 18),
                       ('example2.txt', 18),
                       ('input.txt', 39126)]
 
-    def test_checksum(self):
         for filename, result in self.tests:
             ssheet = common.reader(filename)
             self.assertEqual(part1.checksum(ssheet), result)

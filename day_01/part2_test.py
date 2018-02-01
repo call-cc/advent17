@@ -7,7 +7,7 @@ import common
 
 
 class TestCaptcha(unittest.TestCase):
-    def setUp(self):
+    def test_captcha(self):
         self.tests = [('example5.txt', 6),
                       ('example6.txt', 0),
                       ('example7.txt', 4),
@@ -15,7 +15,6 @@ class TestCaptcha(unittest.TestCase):
                       ('example9.txt', 4),
                       ('input.txt', 1188)]
 
-    def test_captcha(self):
         for filename, result in self.tests:
             num = common.reader(filename)
             self.assertEqual(part2.captcha(num), result)

@@ -7,10 +7,6 @@ import common
 
 
 class TestChecksum(unittest.TestCase):
-    def setUp(self):
-        self.tests = [('example2.txt', 9),
-                      ('input.txt', 258)]
-
     def testDivide(self):
         tests = [(1, 2, 2),
                  (2, 1, 2),
@@ -35,6 +31,9 @@ class TestChecksum(unittest.TestCase):
             self.assertEqual(part2.worker(row[0], row[1:]), result)
 
     def test_checksum(self):
+        self.tests = [('example2.txt', 9),
+                      ('input.txt', 258)]
+
         for filename, result in self.tests:
             ssheet = common.reader(filename)
             self.assertEqual(part2.checksum(ssheet), result)
