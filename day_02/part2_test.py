@@ -8,7 +8,8 @@ import common
 
 class TestChecksum(unittest.TestCase):
     def setUp(self):
-        self.tests = [('example2.txt', 9)]
+        self.tests = [('example2.txt', 9),
+                      ('input.txt', 258)]
 
     def testDivide(self):
         tests = [(1, 2, 2),
