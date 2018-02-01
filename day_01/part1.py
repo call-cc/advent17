@@ -5,12 +5,12 @@ import common
 
 
 def captcha(num):
-    sum = 0
+    csum = 0
     for i in range(-1, len(num) - 1):
         if num[i] == num[i + 1]:
-            sum += int(num[i])
+            csum += int(num[i])
 
-    return sum
+    return csum
 
 
 if __name__ == '__main__':
